@@ -4,11 +4,15 @@
 
 ## Installing
 
-- Перед использованием установите Python3. Дистрибутивы и инструкцию можно найти на оффициальном [сайте](https://www.python.org/downloads/)
+Перед использованием установите Python3. Дистрибутивы и инструкцию можно найти на оффициальном [сайте](https://www.python.org/downloads/)
 
-- Рекомендуется использовать пакеты из `requirements.txt`. Команда для установки: `pip install -r requirements.txt`.
+Рекомендуется использовать пакеты из `requirements.txt`. 
+Команда для установки: 
+```
+pip install -r requirements.txt`
+```
 
-#### Telegram bot
+## Telegram bot
 
 Создаем бота через [BotFather](https://way23.ru/%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D0%B1%D0%BE%D1%82%D0%B0-%D0%B2-telegram.html)
 
