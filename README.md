@@ -24,7 +24,7 @@ pip install -r requirements.txt`
 	```env
 	TG_TOKEN = <ваш тг токен>
 	```
-4. Запустить скрипт `run.py`
+4. Запустить бота `run.py`
 
 
 ## Functional
