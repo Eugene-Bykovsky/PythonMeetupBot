@@ -3,6 +3,7 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 start_keyboard = ReplyKeyboardMarkup(
     keyboard=[
+        [KeyboardButton(text="Help")],
         [KeyboardButton(text="Зарегистрироваться")],
         [KeyboardButton(text="Я уже зарегистрирован")]
     ],
