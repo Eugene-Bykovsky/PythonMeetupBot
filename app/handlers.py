@@ -19,9 +19,14 @@ async def start_command(message: Message):
     )
 
 
-@router.message(F.text == "/help")
+@router.message(F.text == "Help")
 async def start_command(message: Message):
-    await message.answer("text")
+    await message.answer(
+        """
+        Навигация:\n
+        "Зарегистрироваться" — Пройти регистрацию на мероприятие как слушатель.\n
+        "Я уже зарегистрирован" — Проверить свою регистрацию и роль (слушатель или докладчик).
+        """)
 
 
 @router.message(F.text == "Зарегистрироваться")
