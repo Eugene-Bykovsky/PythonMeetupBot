@@ -49,9 +49,11 @@ Viewing a list of reports to choose from:
 - _Получение докладчиком списка вопросов, отправленных по его докладам._
 
 Convenient navigation buttons:
+
 _Interactive keyboards for quick interaction with the bot, including buttons for registration, role verification, receiving information and sending questions._
 
 Integration with the API:
+
 _User registration, role verification, schedule receipt, sending questions and receiving them are implemented through interaction with an external API._
 
 
