@@ -3,6 +3,7 @@ from aiogram.types import Message, CallbackQuery, InlineKeyboardButton
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
+from event_programs import get_event_programs
 import requests
 
 from app.keyboards import start_keyboard, listener_keyboard, speaker_keyboard
@@ -62,6 +63,34 @@ async def check_registration(message: Message):
             await message.answer("Вы успешно вошли как слушатель!", reply_markup=listener_keyboard)
         elif "speaker" in roles:
             await message.answer("Вы вошли как докладчик!", reply_markup=speaker_keyboard)
+
+
+@router.message(F.text == "Информация по мероприятию")
+async def event_info(message: Message):
+    event_programs = get_event_programs()
+    if not event_programs:
+        await message.answer("Нет доступных мероприятий.")
+        return
+
+    description = "Список программ:"
+    keyboard_builder = InlineKeyboardBuilder()
+    for event in event_programs:
+        start_dt = datetime.strptime(event['start_date'], '%Y-%m-%dT%H:%M:%SZ')
+        start_date = start_dt.strftime('%d.%m.%Y')  
+        start_time = start_dt.strftime('%H:%M') 
+
+        end_dt = datetime.strptime(event['end_date'], '%Y-%m-%dT%H:%M:%SZ')
+        end_date = end_dt.strftime('%d.%m.%Y')      
+        end_time = end_dt.strftime('%H:%M')      
+
+        button_text = f"{event['title']}:\n{start_date} {start_time} - {end_date} {end_time}"
+        button = InlineKeyboardButton(
+            text=button_text,
+            callback_data=f"event_id:{event['id']}"
+        )
+        keyboard_builder.add(button)
+    keyboard = keyboard_builder.as_markup()
+    await message.answer(description, reply_markup=keyboard)    
 
 
 @router.message(F.text == "Задать вопрос")
