@@ -22,7 +22,7 @@ pip install -r requirements.txt`
 
    `.env`
 	```env
-	TG_TOKEN = <ваш тг токен>
+	TG_TOKEN = <your bot token>
 	```
 4. Launch the bot `run.py `
 
