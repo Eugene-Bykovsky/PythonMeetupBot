@@ -34,25 +34,25 @@ PythonMeetupBot using the aiogram library and asynchronous approach for high per
 
 Provides the following functions:
 
-Registration for the event:
+**Registration for the event**:
 - _The ability to register as a listener via Telegram_.
 - _Checking the registration status and the role of the user (listener or speaker)_.
 
-Information about the event:
+**Information about the event**:
 - _Getting detailed information about the event, including the name, description, start and end dates_.
 - _Access to the schedule of reports with indication of time and speakers._
 - _Ask a question to the speaker_
 
-Viewing a list of reports to choose from:
+**Viewing a list of reports to choose from**:
 - _Sending a question to the speaker with the option to specify a contact for feedback._
 - _Working with questions for speakers_
-- _Получение докладчиком списка вопросов, отправленных по его докладам._
+- _Receiving a list of questions sent by the speaker based on his reports_._
 
-Convenient navigation buttons:
+**Convenient navigation buttons**:
 
 _Interactive keyboards for quick interaction with the bot, including buttons for registration, role verification, receiving information and sending questions._
 
-Integration with the API:
+**Integration with the API**:
 
 _User registration, role verification, schedule receipt, sending questions and receiving them are implemented through interaction with an external API._
 
